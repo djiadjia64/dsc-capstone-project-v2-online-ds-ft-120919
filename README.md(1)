@@ -1,0 +1,46 @@
+
+#  Multivariate LSTM Applied to Stock Forecasting
+
+## Introduction
+
+For this project, I will be using an LSTM neural network in an attempt to forecast prices for a financial dataset. LSTM is short for Long Short-Term Memory, a type of neural network that uses deep learning to retain predictions, hence the 'long' in the name. This is advantageous to regular neural networks as the algorithm is able to 'remember' data from further in the past. Specifically for this project, I will be attempting to predict prices for SPY before the fundamental effects of the coronavirus lead to a steep sell-off. Particularly, I will be attempting to forecast what the SPY would have possibly looked if coronavirus had not somehow happened. 
+
+## Fundamentals of the Market
+
+The stock market has been a topic that has intrigued investors and outsiders alike for as long as it has existed. Hedge funds and banks have sunk billions into research to find 'edges' that may increase the chances of being correct from just random chance and luck. These methods usually involve running deep-learning models through stupidly-large amounts of data in an attempt to find any hidden patterns or correlations. This new but ever-increasing-in-popularity approach to the markets is classified as quantitative trading. Though ultimately the market is moved in the long-term by underlying fundamentals, the market moves fundamentally only a percentage of the time. For example, fundamental announcements that give the market new information are met by violent price action that quickly bring the market to its "fair-price." This move is often so quick and violent in nature that human traders have little opportunity to participate before the move has finished. Generally, movement in the markets seen on a day-to-day basis are primarily being driven by either technical factors such as sentiment and other imbalances. Once technical analysis, the study of price action, was the king for many traders. Nowadays, funds are making their quantitative findings their core philisophy for price forecasting as the edge given by technical analysis has long been traded out. However, quantitative analysis faces many hurdles. Depending on the type of gradient descent used to train the model, many machine learning models simply return weighted averages of the training dataset. This is useful to some degree, but these moving averages are already very easy to program and are used by many traders. The area in which machine learning can generate the most insight and edge, in my opinion, is in the deep learning and black box category. Data inherently is very large and hard to comb through manually, and these algorithms can help decipher patterns not obvious to the human eye with unparalleled speed. Specifically, I will be using neural networks vs. a strict time-series ARIMA approach. 
+
+
+## The Dataset
+
+** Dataset contains around 2400 rows of data
+
+Columns:
+
+1. SPY: Top 500 US companies (a decent proxy look at US economical standing)
+
+2. TLT: Bond Yield for bonds 20+ years and up (lending rates from the US government) 
+
+3. GLD: Price of Gold
+
+4. UVXY: Fear/Volatility Index 
+
+## Objectives
+
+1. Attempt to forecast SPY prices 
+
+2. See which type of machine-learning model came out to be the most useful
+
+## ARIMA Model
+
+An ARIMA model is an algorithm that learns through gradient descent and uses a moving average approach to prediction. One downside to this model is that only one variable can be included. 
+
+## LSTM Model
+
+LSTM is short for long-short term memory and is a type of neural network which is able to compensate for the 'forgetting' aspect of many traditional neural networks. Also, this particular type of neural network allows for multiple variables. 
+
+
+## Results: 
+
+1. ARIMA: Gives a weighted-mean average move, decent at staying with trend if it persists but is not good at predicting large shifts in momentum
+
+2. Good at predicting minute trends but may be overfitting depending on test data. Useful with multiple variables. 
